@@ -9,5 +9,9 @@ defmodule ExMon do
 
   def start_game(player) do
     @computer_name |> create_player(:garra, :explosao, :cura_sinistra) |> Game.start(player)
+
+    IO.puts("\n========= THE GAME STARTED!!! ========\n")
+    IO.inspect(ExMon.Game.info())
+    IO.puts("-----------------")
   end
 end
