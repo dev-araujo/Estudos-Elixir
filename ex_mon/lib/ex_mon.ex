@@ -1,5 +1,6 @@
 defmodule ExMon do
   alias ExMon.{Game, Player}
+  alias ExMon.Game.Actions
 
   @computer_name "Robotinix"
 
@@ -13,5 +14,9 @@ defmodule ExMon do
     IO.puts("\n========= THE GAME STARTED!!! ========\n")
     IO.inspect(ExMon.Game.info())
     IO.puts("-----------------")
+  end
+
+  def make_move(move) do
+    Actions.fetch_move(move)
   end
 end
